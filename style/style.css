@@ -1,0 +1,133 @@
+body{
+  background-color: #c5a78a;
+}
+.backAbout{
+  background-image: url(../images/backFlower.jpg);
+}
+nav ul{
+  list-style: none;
+  margin-top: 3%;
+  margin-left: 25%;
+  padding-left: 0;
+}
+nav li{
+ display: inline;
+}
+nav li:after{
+  content:"|";
+  color: #000;
+}
+ul{
+  list-style-type:circle;
+  margin:0;
+  padding-left: 0;
+}
+li {display:block;}
+a.text:active,
+a.text:hover{
+  text-decoration: none;
+  color:#654321;
+}
+a.text{
+  size: 24pt;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  text-decoration: none;
+  color: #000;
+}
+p{
+  font-family: sans-serif;
+  font-style: italic;
+  color: #000;
+}
+
+#mainInteresLynk{
+  width: 595px;
+  height: 95px;
+  margin: 5.5px 10px 10px 0px;
+}
+h4{
+text-align: center;
+}
+
+a.textHyper:active,
+a.textHyper:hover{
+  text-decoration: none;
+  color:#654321;
+}
+a.textHyper{
+  font-style: italic;
+  font-family: 'Times New Roman';
+  text-decoration: none;
+  color: #000;
+}
+table{
+  align: bottom;
+}
+
+.photos img{
+  width: 15%;
+  margin: 10px;
+}
+.indexBack{
+  display: inline-block;
+  float: left;
+}
+
+.backIndex h1{
+  padding-bottom:10px;
+  font-family: 'Times New Roman';
+  font-style: italic;
+  margin-left: 28%;
+  margin-top: 3%;
+  size: 36pt;
+}
+.textInst{
+  font-family: 'Times New Roman';
+  font-style: italic;
+  margin-left: 35%;
+  margin-top: 10%;
+  size: 36pt;
+  text-decoration: none;
+  color: #000;
+}
+.indexBack p{
+  padding-right: 10px;
+  font-family: 'Times New Roman';
+  font-style: italic;
+  margin-left:35%;
+  margin-top: 10%;
+  size: 24pt;
+}
+.indexBack img{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.textAbout{
+  font-family: 'Times New Roman';
+  font-style: italic;
+  margin-left: 140px;
+  margin-top: 76px;
+  size: 30pt;
+}
+
+.imgAbout img{
+  margin-top: 76px;
+  margin-left: 140px;
+}
+.contei{
+  height: 100px;
+}
+.interesting{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  -webkit-box-shadow: 0px 0px 34px 1px rgba(34, 60, 80, 0.2);
+ -moz-box-shadow: 0px 0px 34px 1px rgba(34, 60, 80, 0.2);
+ box-shadow: 0px 0px 34px 1px rgba(34, 60, 80, 0.2);
+ margin-top: 40px;
+}
+.interesting img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
