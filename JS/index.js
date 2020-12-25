@@ -35,4 +35,62 @@ function outputPhotos() {
     <figcaption>Рисунок ${i+1}</figcaption></figure>`);
     }
 }
+
+function check_error(field) {
+    if (field.value == "") {
+        return true
+        field.focus();
+    } else false;
+}
  
+function check_form(form) {
+    console.log(form.formFIO.value);
+    if (check_fio(form.formFIO)) {
+        check_fio(formFIO);
+
+    } 
+}
+
+function check_fio(formFIO){
+    var space = 0;
+    var fio = document.formContact.formFIO.value;
+    if(fio!= ""){
+        for (var i = 0; i < fio.length; i=i+2) {
+                if(i!=4){
+                    if (fio[i] !=" " && fio[i+1] == " "){
+                        space++;
+                    }
+                }
+                if(i==4){
+                    if(fio[i]!=" "){
+                        space++;
+                    }       
+                }
+        }
+    }
+    if (space != 3) {
+            formFIO.focus;
+            alert("Неверный формат данных");
+            formFIO.style.backgroundColor='red';
+            return false;
+    }
+ }
+ function check_study(form){
+     console.log(form.question2.value); 
+    if (check_question2(form.question2)) {
+        check_question2(question2);
+    } 
+ }
+ function check_question2(question2){
+     var res=document.formStudy.question2.value;
+     alert(res);
+     if(Number.isInteger(res)){
+         return true;
+     }
+     else{
+        alert("Введите целое число");
+        question2.focus;
+        question2.style.backgroundColor='red';
+        return false;
+    }
+ }
