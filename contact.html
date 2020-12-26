@@ -24,7 +24,7 @@
 
   </div>
   <div class="contactYou">
-   <form name="formContact" >
+   <form name="formContact" onsubmit="return check_submit_cont()" >
       <p><b>FIO</b></p>
         <input type="text" name="formFIO" size="50" maxlength="45" required placeholder="ФИО через пробел">
         
@@ -55,7 +55,7 @@
           >
         </p>  
 
-        <br> <input type="submit" name="Submit" value="Отправить" onclick="check_form(this.form)"/>
+        <br> <input type="submit" name="Submit" value="Отправить" />
         <br> <input type="reset" value="Очистить"/>
    </form>
     

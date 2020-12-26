@@ -51,51 +51,53 @@ function check_form(form) {
     } 
 }
 
-function check_fio(formFIO){
-    var space = 0;
-    var fio = document.formContact.formFIO.value;
-    if(fio!= ""){
-        for (var i = 0; i < fio.length; i=i+2) {
-                if(i!=4){
-                    if (fio[i] !=" " && fio[i+1] == " "){
-                        space++;
-                    }
-                }
-                if(i==4){
-                    if(fio[i]!=" "){
-                        space++;
-                    }       
-                }
-        }
-    }
-    if (space != 3) {
-            formFIO.focus;
-            alert("Неверный формат данных");
-            formFIO.style.backgroundColor='red';
-            return false;
-    }
- }
- function check_study(form){
-     console.log(form.question2.value); 
-    if (check_question2(form.question2)) {
-        check_question2(question2);
-    } 
- }
- function check_question2(question2){
-     var res=document.formStudy.question2.value;
-    // alert(res);
-     if(Number.isInteger(res)){
-         return true;
-     } else{
-        alert("Введите целое число");
-       // question2.focus;
-        question2.style.backgroundColor='red';
-        return false;
-    }
- }
+
  
- function check_submit(form){
-     alert("check sub")
-    if(check_question2()){ alert("check yes"); alert(false);return false;} else {return true;}
-    
+var res,x;
+  
+ function check_question2(){
+    res=document.formStudy.question2.value;
+    res=res-0;
+    if(res!=NaN && Number.isInteger(res))
+        return true; 
+   
+    alert("Введите целое число ");
+    formStudy.question2.focus(); 
+    return false; 
  }
+
+ function check_submit(){
+   
+    if(!check_question2()){
+        
+        return false;
+    } 
+    return true;
+ }
+ function check_submit_cont(){
+    if(!check_fio()){return false;}
+    return true;
+}
+function check_fio(formFIO){
+   var space = 0;
+   var fio = document.formContact.formFIO.value;
+   if(fio!= ""){
+       for (var i = 0; i < fio.length; i=i+2) {
+               if(i!=4){
+                   if (fio[i] !=" " && fio[i+1] == " "){
+                       space++;
+                   }
+               }
+               if(i==4){
+                   if(fio[i]!=" "){
+                       space++;
+                   }       
+               }
+       }
+   }
+   if (space != 3) {
+           formFIO.focus;
+           alert("Неверный формат данных");
+           return false;
+   }
+}
