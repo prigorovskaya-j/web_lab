@@ -83,14 +83,19 @@ function check_fio(formFIO){
  }
  function check_question2(question2){
      var res=document.formStudy.question2.value;
-     alert(res);
+    // alert(res);
      if(Number.isInteger(res)){
          return true;
-     }
-     else{
+     } else{
         alert("Введите целое число");
-        question2.focus;
+       // question2.focus;
         question2.style.backgroundColor='red';
         return false;
     }
+ }
+ 
+ function check_submit(form){
+     alert("check sub")
+    if(check_question2()){ alert("check yes"); alert(false);return false;} else {return true;}
+    
  }
