@@ -17,16 +17,17 @@ function outputInteres(id, title, text, image, name_image, ...params){
      
         document.write(`</ul></p></div></div>`);     
 }
+
 function outputPhotos() {
     let foto = [];
     let title = [];
     const n = 15;
  
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < 5; i++) {
         foto[i] = "images/"+(i + 1) + ".jpg";
     }
  
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < 10; i++) {
         title[i] = "Рисунок" + (i + 1);
     }
  
@@ -36,23 +37,6 @@ function outputPhotos() {
     }
 }
 
-function check_error(field) {
-    if (field.value == "") {
-        return true
-        field.focus();
-    } else false;
-}
- 
-function check_form(form) {
-    console.log(form.formFIO.value);
-    if (check_fio(form.formFIO)) {
-        check_fio(formFIO);
-
-    } 
-}
-
-
- 
 var res,x;
   
  function check_question2(){
@@ -69,35 +53,64 @@ var res,x;
  function check_submit(){
    
     if(!check_question2()){
-        
         return false;
     } 
     return true;
  }
  function check_submit_cont(){
     if(!check_fio()){return false;}
+    if(!check_tel()){return false;}
+    if(!check_mail()){return false;}
+    if(!check_comment()){return false;}
     return true;
 }
-function check_fio(formFIO){
-   var space = 0;
+function check_comment(){
+  var com=document.formContact.comment.value;
+  if(com!=""){return true;}
+  else{
+    alert("Заполните комментарий");
+    formContact.comment.focus();
+    return false;
+  }
+}
+function check_mail(){
+  var mail=document.formContact.Mail.value;
+  if(mail!=""){return true;}
+  else{
+    alert("Заполните email");
+    formContact.Mail.focus();
+    return false;
+  }
+}
+
+function check_tel(){
+  var phone=document.formContact.tel.value;
+  let array = phone.split("");
+  if((array.length==10 || array.length==11 || array.length==12)&&(array[0]=='+')&&(array[1]=='3' || array[1]=='7')){
+    return true;
+  } else {
+    alert("Неверный формат данных");
+    formContact.tel.focus();
+    return false;
+  }
+}
+function check_fio(){
    var fio = document.formContact.formFIO.value;
-   if(fio!= ""){
-       for (var i = 0; i < fio.length; i=i+2) {
-               if(i!=4){
-                   if (fio[i] !=" " && fio[i+1] == " "){
-                       space++;
-                   }
-               }
-               if(i==4){
-                   if(fio[i]!=" "){
-                       space++;
-                   }       
-               }
+   let array = fio.split(" ");
+   if(array.length==3){
+     for(i=0; i<array.length; i++){
+       if(array[i]!=""){
+         return true;
        }
+       else{
+         alert("Неверный формат данных");
+       formContact.formFIO.focus();
+       return false;}
+     }
    }
-   if (space != 3) {
-           formFIO.focus;
-           alert("Неверный формат данных");
-           return false;
+   else {
+    alert("Неверный формат данных");
+    formContact.formFIO.focus();
+    return false;
    }
 }

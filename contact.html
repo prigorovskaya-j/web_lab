@@ -10,23 +10,24 @@
 </head>
 <body>
   <div class="onePage">
-    <nav>
+    <nav id="menu">
       <ul>
-        <li><a href="index.html" class="text"> Главная страница</a></li>
-        <li><a href="about.html" class="text"> Обо мне</a></li>
-        <li><a href="interest.html" class="text">Мои интересы</a></li>
-        <li><a href="studing.html" class="text">Учеба</a></li>
-        <li><a href="test.html" class="text">Тест</a></li>
-        <li><a href="photo.html" class="text">Фотоальбом</a></li>
-        <li><a href="#" class="text">Контакт</a></li>
+        <li><a href="index.html" > Главная страница</a></li>
+        <li><a href="about.html" > Обо мне</a></li>
+        <li><a href="interest.html" >Мои интересы</a></li>
+        <li><a href="studing.html" >Учеба</a></li>
+        <li><a href="test.html" >Тест</a></li>
+        <li><a href="photo.html" >Фотоальбом</a></li>
+        <li><a href="#" >Контакт</a></li>
       </ul>
     </nav>
-
   </div>
+
+
   <div class="contactYou">
    <form name="formContact" onsubmit="return check_submit_cont()" >
       <p><b>FIO</b></p>
-        <input type="text" name="formFIO" size="50" maxlength="45" required placeholder="ФИО через пробел">
+        <input type="text" name="formFIO" size="50" maxlength="45" placeholder="ФИО через пробел">
         
 
       <p><b>ПОЛ</b></p>
@@ -44,15 +45,12 @@
         </select>
 
         <p><b>Комментарий</b></p>
-        <input type="text"class="comment" size="50" maxlength="100" required>
+        <input type="text" name="comment" size="50" maxlength="100">
         <br>
         <label for="Mail">Почта</label> 
-         <input name="Mail" type="email" required>
+         <input name="Mail" type="email">
           
-        <p>Телефон в формате +7-000-000-00-00: + <input type="tel" 
-          name="tel" 
-          pattern="[7]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-          >
+        <p>Телефон в формате +7/+3 <input type="tel" name="tel">
         </p>  
 
         <br> <input type="submit" name="Submit" value="Отправить" />

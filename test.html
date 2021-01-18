@@ -11,15 +11,15 @@
 
 </head>
 <body class="backColor">
-    <nav>
+    <nav id="menu">
       <ul>
-        <li><a href="index.html" class="text"> Главная страница</a></li>
-        <li><a href="about.html" class="text"> Обо мне</a></li>
-        <li><a href="interest.html" class="text">Мои интересы</a></li>
-        <li><a href="studing.html" class="text">Учеба</a></li>
-        <li><a href="#" class="text">Тест</a></li>
-        <li><a href="photo.html" class="text">Фотоальбом</a></li>
-        <li><a href="contact.html" class="text">Контакт</a></li>
+        <li><a href="index.html" > Главная страница</a></li>
+        <li><a href="about.html" > Обо мне</a></li>
+        <li><a href="interest.html" >Мои интересы</a></li>
+        <li><a href="studing.html" >Учеба</a></li>
+        <li><a href="#" >Тест</a></li>
+        <li><a href="photo.html" >Фотоальбом</a></li>
+        <li><a href="contact.html" >Контакт</a></li>
       </ul>
     </nav>
 <h4>Министерство науки и высшего образования Российской Федерации
@@ -31,7 +31,7 @@
 <p><b>Тест по дисцплине: Основы программирования и алгориметрического языка</b></p>
 <form name="formStudy" onsubmit="return check_submit()">
   <p><b>ФИО:</b> </p>
-  <input type="text" name="formFIO" size=50px maxlength=45 >
+  <input type="text" name="formFIO" size=50px maxlength=45 required>
   <p><b>Группа:</b></p>
   <select name="group" required>
     <option disabled selected>Выберите группу</option>
@@ -69,14 +69,15 @@
 </select>
 
 <p><b>Вопрос 2: Сколько байт хранит в себе int</b> </p>
-<input type="textrea" name="question2" size=50px maxlength=45 >
+<input type="textrea" name="question2" size=50px maxlength=45 required>
 
 <p><b>Вопрос 3: Переменная — это...</b></p>
-<input type="radio" name="question3" value="1"> 1. служебное слово на языке QBASIC
+<input type="radio" name="question3" value="1" required> 1. служебное слово на языке QBASIC
 <br>
-<input type="radio" name="question3" value="2"> 2. область памяти, в которой хранится некоторое значение
+<input type="radio" name="question3" value="2" required> 2. область памяти, в которой хранится некоторое значение
 <br>
-<input type="radio" name="question3" value="3"> 3. значение регистра
+<input type="radio" name="question3" value="3" required> 3. значение регистра
+
 <br> <input type="submit" name="Submit" value="Отправить" />
 <p> <input type="reset" value="Очистить"/></p>
 </form>
