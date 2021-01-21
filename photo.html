@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style/style.css">
-  <script src="js/index.js"></script>
-  <script src="JS/history.js"></script>
-  <title>Фотоальбом</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/index.js"></script>
+    <script src="js/history.js"></script>
+    <title>Фотоальбом</title>
 </head>
+
 <body>
-  <div class="onePage">
-    <nav id="menu">
-      <ul>
-        <li><a href="index.html" > Главная страница</a></li>
-        <li><a href="about.html" > Обо мне</a></li>
-        <div class="dropdown">
-          <li><a href="interest.html" class="dropbtn" onclick="myFunction()" >Мои интересы</a></li>
-          <div class="dropdown-content" id="myDropdown">
-            <a href="interest.html#Books" class="textHyper">Книги</a>
-            <a href="interest.html#serial" class="textHyper">Сериалы</a>
-            <a href="interest.html#blog" class="textHyper">Блог</a>
-            <a href="interest.html#program" class="textHyper">Программирование</a>
-          </div>
-        </div> 
-        <li><a href="studing.html" >Учеба</a></li>
-        <li><a href="test.html" >Тест</a></li>
-        <li><a href="#" >Фотоальбом</a></li>
-        <li><a href="contact.html" >Контакт</a></li>
-        <li><a href="history.html" >История</a></li>
-      </ul>
-    </nav>
-  </div>
-  <script>
-    startCookies(this);
-    getCookie(this);
-    setCookie(this);
-  </script>
-  <div><p id="DDay"><script>currentDate()</script></p> </div>
-<div class="photos">
-  <div class="page-title-photo">
-     <p>Фотоальбом</p>
-  </div>
-  <div class="photoAlbom">
- <script>outputPhotos()</script>
-  <!--</div>
+    <div class="onePage">
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html"> Главная страница</a></li>
+                <li><a href="about.html"> Обо мне</a></li>
+                <div class="dropdown">
+                    <li><a href="interest.html" class="dropbtn" onclick="myFunction()">Мои интересы</a></li>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="interest.html#Books" class="textHyper">Книги</a>
+                        <a href="interest.html#serial" class="textHyper">Сериалы</a>
+                        <a href="interest.html#blog" class="textHyper">Блог</a>
+                        <a href="interest.html#program" class="textHyper">Программирование</a>
+                    </div>
+                </div>
+                <li><a href="studing.html">Учеба</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li><a href="#">Фотоальбом</a></li>
+                <li><a href="contact.html">Контакт</a></li>
+                <li><a href="history.html">История</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+    </script>
+    <div>
+        <p id="DDay">
+            <script>
+                currentDate()
+            </script>
+        </p>
+    </div>
+    <div class="photos">
+        <div class="page-title-photo">
+            <p>Фотоальбом</p>
+        </div>
+        <div class="photoAlbom">
+            <script>
+                outputPhotos()
+            </script>
+            <!--</div>
   <div class="lineOnePhoto">
     <img src="images/1.jpg" alt="1" title="one page one image">  
     <img src="images/2.jpg" alt="2" title="one page two image">  
@@ -67,7 +74,8 @@
     <img src="images/15.jpg" alt="5" title="three page five image">  
   </div>
 -->
-</div>
+        </div>
 
 </body>
+
 </html>
