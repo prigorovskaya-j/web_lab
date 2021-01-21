@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Сайт Пригоровской Юлии - Главная страница</title>
+  <title>Главная</title>
   <link rel="stylesheet" href="style/style.css">
+  <script src="JS/index.js"></script>
+  <script src="JS/history.js"></script>
 </head>
 <body class="backIndex">
 
@@ -13,16 +15,27 @@
     <ul>
       <li><a href="#" > Главная страница</a></li>
       <li><a href="about.html" > Обо мне</a></li>
-      <li><a href="interest.html" >Мои интересы</a></li>
+      <div class="dropdown">
+        <li><a href="interest.html" class="dropbtn" onclick="myFunction()" >Мои интересы</a></li>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="interest.html#Books" class="textHyper">Книги</a>
+          <a href="interest.html#serial" class="textHyper">Сериалы</a>
+          <a href="interest.html#blog" class="textHyper">Блог</a>
+          <a href="interest.html#program" class="textHyper">Программирование</a>
+        </div>
+      </div> 
       <li><a href="studing.html" >Учеба</a></li>
       <li><a href="test.html" >Тест</a></li>
       <li><a href="photo.html" >Фотоальбом</a></li>
       <li><a href="contact.html" >Контакт</a></li>
+      <li><a href="history.html" >История</a></li>
     </ul>
   </nav>
-
+  <script>
+    startCookies(this);
+  </script>
 <h1>Пригоровская Юлия Ивановна</h1>
-
+<div><p id="DDay"><script>currentDate()</script></p> </div>
 <div class="indexBack">
   <p>  
     <br>Группа ПИ/б-18-1-о

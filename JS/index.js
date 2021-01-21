@@ -58,59 +58,105 @@ var res,x;
     return true;
  }
  function check_submit_cont(){
-    if(!check_fio()){return false;}
-    if(!check_tel()){return false;}
-    if(!check_mail()){return false;}
-    if(!check_comment()){return false;}
-    return true;
+    if(!focusFio()){return false;}
+    if(!focusCom()){return false;}
+    if(!focusMail()){return false;}
+    if(!focusTel()){return false;}
 }
-function check_comment(){
+
+function focusCom(x){
   var com=document.formContact.comment.value;
-  if(com!=""){return true;}
+  var element = document.getElementById("pCom");
+      
+  if(com!=""){
+    x.style.backgroundColor="green";
+    element.innerHTML = "";
+    return true;
+  }
   else{
-    alert("Заполните комментарий");
-    formContact.comment.focus();
+    x.style.backgroundColor="red";
+    element.innerHTML = "Заполните комментарий";
+    focus();
     return false;
   }
 }
-function check_mail(){
+function focusMail(){
   var mail=document.formContact.Mail.value;
-  if(mail!=""){return true;}
+  var element = document.getElementById("pMail");
+  if(mail!=""){
+    x.style.backgroundColor="green";
+    element.innerHTML = "";
+    return true;
+  }
   else{
-    alert("Заполните email");
-    formContact.Mail.focus();
+    x.style.backgroundColor="red";
+    element.innerHTML = "Заполните email";
     return false;
   }
 }
 
-function check_tel(){
+function focusTel(){
   var phone=document.formContact.tel.value;
+  var element = document.getElementById("pFio");
   let array = phone.split("");
   if((array.length==10 || array.length==11 || array.length==12)&&(array[0]=='+')&&(array[1]=='3' || array[1]=='7')){
+    x.style.backgroundColor="green";
+    element.innerHTML = "";
     return true;
   } else {
-    alert("Неверный формат данных");
-    formContact.tel.focus();
+    x.style.backgroundColor="red";
+    element.innerHTML = "Формат телефона не верный";
     return false;
   }
 }
-function check_fio(){
-   var fio = document.formContact.formFIO.value;
+
+function focusFio(x){
+  var fio = document.formContact.formFIO.value;
+  var element = document.getElementById("pFio");
+  
    let array = fio.split(" ");
    if(array.length==3){
      for(i=0; i<array.length; i++){
        if(array[i]!=""){
+         x.style.backgroundColor="green";
+         element.innerHTML = "";
          return true;
        }
        else{
-         alert("Неверный формат данных");
-       formContact.formFIO.focus();
-       return false;}
+          x.style.backgroundColor="red";
+          element.innerHTML = "Формат ФИО не верный";
+          return false;
+        }   
      }
    }
    else {
-    alert("Неверный формат данных");
-    formContact.formFIO.focus();
+    x.style.backgroundColor="red";
+    element.innerHTML = "Формат ФИО не верный";
     return false;
    }
+    
 }
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+}
+}
+
+//ДМГ день недели
+function currentDate() {
+  var element = document.getElementById("DDay");
+  var t=new Date();
+  var now = new Date().toLocaleDateString();
+  var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  d=t.getDay();
+  element.innerText ="Дата: "+now+"  "+days[d];
+  setTimeout("currentDate()", 1000);
+}
+
